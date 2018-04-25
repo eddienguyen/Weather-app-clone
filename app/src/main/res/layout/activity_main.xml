@@ -1,18 +1,144 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:id="@+id/activity_main"
+    android:background="#2CA6B5">
 
     <TextView
-        android:layout_width="wrap_content"
+        android:id="@+id/txtCity"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:gravity="center"
+        android:background="#0E85AF"
+        android:text="Hello"
+        android:textSize="36sp"
+        android:textStyle="normal"
+        android:textColor="#FEFBFF"
+        android:fontFamily="sans-serif"/>
 
-</android.support.constraint.ConstraintLayout>
+    <TextView
+        android:id="@+id/txtLastUpdate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/txtCity"
+        android:gravity="center"
+        android:text="last update"
+        android:textSize="18sp"
+        android:textColor="#FEFBFF"
+        android:fontFamily="sans-serif"
+        android:textStyle="normal" />
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/imageView"
+        android:layout_gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"/>
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="5"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txtDescription"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif"
+                    android:gravity="bottom|center"
+                    android:text=""
+                    android:textColor="#FEFBFF"
+                    android:textSize="30sp"
+                    android:textStyle="normal" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txtHumidity"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="top|right"
+                    android:text=""
+                    android:textSize="20sp"
+                    android:textStyle="normal"
+                    android:layout_weight="2"
+                    android:textColor="#FEFBFF"
+                    android:fontFamily="sans-serif"
+                    android:layout_gravity="top"
+                    />
+
+                <TextView
+                    android:id="@+id/txtTime"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="top|center"
+                    android:text=""
+                    android:textSize="20sp"
+                    android:textStyle="normal"
+                    android:layout_weight="3"
+                    android:textColor="#FEFBFF"
+                    android:fontFamily="sans-serif"
+                    />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_weight="4"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/txtCelsius"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text=""
+                android:textStyle="normal"
+                android:textSize="70sp"
+                android:gravity="center|left"
+                android:textColor="#FEFBFF"
+                android:fontFamily="sans-serif"
+                />
+
+        </LinearLayout>
+
+
+
+
+
+    </LinearLayout>
+
+</RelativeLayout>
